@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/stretchr/testify/assert"
 	"testing"
+	"unsafe"
 )
 
 func createStack() Stack {
@@ -108,4 +109,73 @@ func TestShouldGetLastValueStack(t *testing.T) {
 	fmt.Println()
 
 	assert.Equal(t, 1, 	*stack.GetLastElement())
+}
+
+func TestShouldRemoveElementStack(t *testing.T) {
+
+	stack := createStack()
+	stack.Print()
+	fmt.Println()
+	element := stack.RemoveElement(2)
+
+	assert.Equal(t, true, 	element)
+
+
+	stack.Print()
+	fmt.Println()
+}
+
+func TestShouldFindElementStack(t *testing.T) {
+
+	stack := createStack()
+	stack.Print()
+	fmt.Println()
+	element := stack.FindElement(2)
+
+	assert.Equal(t, 2, 	element)
+
+
+	stack.Print()
+	fmt.Println()
+}
+
+func TestShouldFindElementAndCountStack(t *testing.T) {
+
+	stack := createStack()
+	stack.Print()
+	fmt.Println()
+	element, count := stack.FindElementAndCount(2, 0, 0)
+
+
+	assert.Equal(t, 2, 	element)
+	assert.Equal(t, 1, 	count)
+
+
+	stack.Print()
+	fmt.Println()
+}
+
+
+func TestShouldRemoveElementResultAfterSubtractStack(t *testing.T) {
+
+	stack := Stack{}
+	stack.New()
+	stack.Push(10)
+	stack.Push(4)
+	stack.Push(1)
+	stack.Push(2)
+	stack.Push(5)
+	stack.Print()
+	fmt.Println()
+	n:= 9
+	r := stack.RemoveElementResultAfterSubtract2(&n)
+
+	assert.Equal(t, true, 	r)
+
+	stack.Print()
+	fmt.Println()
+
+	p := unsafe.Pointer(&n)
+	fmt.Println(*(*int)(p))
+
 }
