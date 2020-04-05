@@ -1,0 +1,40 @@
+= Marshaller
+
+curl https://api.github.com/users/mvillafuertem
+
+----
+{
+  "login": "mvillafuertem",
+  "id": 24855057,
+  "node_id": "MDQ6VXNlcjI0ODU1MDU3",
+  "avatar_url": "https://avatars1.githubusercontent.com/u/24855057?v=4",
+  "gravatar_id": "",
+  "url": "https://api.github.com/users/mvillafuertem",
+  "html_url": "https://github.com/mvillafuertem",
+  "followers_url": "https://api.github.com/users/mvillafuertem/followers",
+  "following_url": "https://api.github.com/users/mvillafuertem/following{/other_user}",
+  "gists_url": "https://api.github.com/users/mvillafuertem/gists{/gist_id}",
+  "starred_url": "https://api.github.com/users/mvillafuertem/starred{/owner}{/repo}",
+  "subscriptions_url": "https://api.github.com/users/mvillafuertem/subscriptions",
+  "organizations_url": "https://api.github.com/users/mvillafuertem/orgs",
+  "repos_url": "https://api.github.com/users/mvillafuertem/repos",
+  "events_url": "https://api.github.com/users/mvillafuertem/events{/privacy}",
+  "received_events_url": "https://api.github.com/users/mvillafuertem/received_events",
+  "type": "User",
+  "site_admin": false,
+  "name": null,
+  "company": null,
+  "blog": "",
+  "location": null,
+  "email": null,
+  "hireable": null,
+  "bio": null,
+  "public_repos": 18,
+  "public_gists": 1,
+  "followers": 0,
+  "following": 1,
+  "created_at": "2016-12-31T15:56:31Z",
+  "updated_at": "2019-01-23T07:38:28Z"
+}
+----
+
